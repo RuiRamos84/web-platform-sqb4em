@@ -1,11 +1,141 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <script src="script.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-  </head>
-  <body>
-    <h1>Hello there!</h1>
-    <a href="/me.html">My other page</a>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>AutoKW</title>
+	<link href="./style/style.css" rel="stylesheet" type="text/css" />
+  <link href="./style/styleform.css" rel="stylesheet" type="text/css" />
+  <link href="./style/dropdown.css" rel="stylesheet" type="text/css" />
+	<script src="/scripts/react.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+	
+</head>
+<img src="./img/head_medium.png" width="100%" height="auto"  >
+<body>
+
+<div class="header">
+
+</div>
+
+<div id="navbar">
+  <a class="active" href="./index.html">História</a>
+  <a href="./maiores_produtores.html">Maiores Produtores</a>
+  <a href="./TOP 3.html">Top 3</a>
+  <a href="./Comparador.html">Comparador</a>
+  <a href="./form.html">Futuro</a>
+ </div>
+
+<div class="content">
+    <h2>&nbspHistória</h2><br>
+<p>Apesar da ideia de carros elétricos ser um conceito relativamente moderno, o primeiro carro elétrico foi criado em 1835 por Thomas Davenport, apesar de em 1828 o húngaro Ányos Jedlik já ter pensado num projeto para um carro elétrico.</p>
+<p>Estes veículos são caracterizados pela utilização de motores elétricos. Estes fazem com que não sejam emitidos quaisquer gases nocivos para o ambiente. Para além disso são muito mais silenciosos que os motores a combustão.</p>
+<p>Ao longo dos anos, diversas marcas famosas de fabricação de carros têm vindo a aumentar a produção de carros elétricos nas suas fábricas. Estes têm vindo a ganhar mais interesse de compra, devido ao aumento das alterações climáticas e ao problema que os carros com motores a combustão têm vido a causar no nosso planeta.</p>
+<p>Em Portugal tem vindo a aumentar o investimento em carros elétricos. Isto foi incentivado pelo facto do Governo Português conceder alguns benefícios fiscais para quem adquirisse um carro elétrico.</p>
+<p>Apesar da ideia de carros elétricos ser um conceito relativamente moderno, o primeiro carro elétrico foi criado em 1835 por Thomas Davenport, apesar de em 1828 o húngaro Ányos Jedlik já ter pensado num projeto para um carro elétrico.</p>
+<p>Estes veículos são caracterizados pela utilização de motores elétricos. Estes fazem com que não sejam emitidos quaisquer gases nocivos para o ambiente. Para além disso são muito mais silenciosos que os motores a combustão.</p>
+<p>Ao longo dos anos, diversas marcas famosas de fabricação de carros têm vindo a aumentar a produção de carros elétricos nas suas fábricas. Estes têm vindo a ganhar mais interesse de compra, devido ao aumento das alterações climáticas e ao problema que os carros com motores a combustão têm vido a causar no nosso planeta.</p>
+<p>Em Portugal tem vindo a aumentar o investimento em carros elétricos. Isto foi incentivado pelo facto do Governo Português conceder alguns benefícios fiscais para quem adquirisse um carro elétrico.</p>
+
+
+<table id="compare">
+  <tr>
+    <td></td>
+ <th>Selecionar Carro<br><select id="dropdown1" onchange="comp1()">
+    <option value="1"></option>
+    <option value="2">Tesla Model S</option>
+    <option value="3">Tesla Model 3</option>
+    <option value="4">Tesla Model X</option>
+    <option value="5">Tesla Model Y</option>
+    <option value="6">Porsche Taycan 4S</option>
+    <option value="7">Renault Zoe</option>
+    <option value="8">Byd E6</option>
+    <option value="9">Volkswagen e-Golf</option>
+</select>
+</th>
+    <th>Selecionar Carro<br><select id="dropdown2" onchange="comp2()">
+    <option value="1"></option>
+    <option value="2">Tesla Model S</option>
+    <option value="3">Tesla Model 3</option>
+    <option value="4">Tesla Model X</option>
+    <option value="5">Tesla Model Y</option>
+    <option value="6">Porsche Taycan 4S</option>
+    <option value="7">Renault Zoe</option>
+    <option value="8">Byd E6</option>
+    <option value="9">Volkswagen e-Golf</option>
+</select>
+</th>
+  <tr>
+    <td></td>
+    <td><div id="image1"></div><div id="nome1"></div></td>
+    <td><div id="nome2"></div></td>
+  <tr>
+    <td class="att">Preço</td>
+    <td><div id="preco1"></div></td>
+    <td><div id="preco2"></div></td>
+  </tr>
+  </tr>
+    <tr>
+    <td class="att">Autonomia</td>
+    <td><div id="autonomia1"></div></td>
+    <td><div id="autonomia2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Potência(cv/kw)</td>
+    <td><div id="potencia1"></div></td>
+    <td><div id="potencia2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Velocidade máxima (km/h)</td>
+    <td><div id="velocidade1"></div></td>
+    <td><div id="velocidade2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Aceleração de 0-100 (seg)</td>
+    <td><div id="aceleracao1"></div></td>
+    <td><div id="aceleracao2"></div></td>
+  </tr>
+    <tr>
+    <td class="att">Super Charger</td>
+    <td><div id="super1"></div></td>
+    <td><div id="super2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Piloto Automático</td>
+    <td><div id="piloto1"></div></td>
+    <td><div id="piloto2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Peso</td>
+    <td><div id="peso1"></div></td>
+    <td><div id="peso2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Lugares</td>
+    <td><div id="lugares1"></div></td>
+    <td><div id="lugares2"></div></td>
+  </tr>
+  <tr>
+    <td class="att">Capacidade Bagageira</td>
+    <td><div id="capacidade1"></div></td>
+    <td><div id="capacidade2"></div></td>
+  </tr>
+ </table>
+ <br>
+
+</div>
+<script src="./scripts/script.js"></script>
+<div id="root"></div>
+  <footer>  
+    <div>    
+      <a>Contacto</a>
+      <a>Contacto</a>
+      <a>Contacto</a>
+      <a>Contacto</a>
+      <a id="the-final-countdown"></a>
+     </div>  
+   </footer>
+ </body>
+
 </html>
